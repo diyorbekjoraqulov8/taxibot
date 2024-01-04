@@ -8,6 +8,7 @@ app.use(express.json())
 require('./bot/bot')
 
 // axios.defaults.baseURL = process.env.GOOGLE_MAPS_API_URL
+let one1 = 1
 
 async function dev() {
   try {
@@ -18,6 +19,11 @@ async function dev() {
       })
     })
     .catch((error) => console.log(error))
+
+    setInterval(() => {
+      console.log(`result is ${one1}`);
+      one1++
+    }, 360000);
   } catch (error) {
     console.log(error);
   }
